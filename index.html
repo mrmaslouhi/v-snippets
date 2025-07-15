@@ -20,21 +20,31 @@
         <a href="#">Log out</a>
       </nav>
       <h1>Make a snippet</h1>
-      <p>Your code snippet will be displayed publicly so be careful what you share. Ensure you are not sharing sensitve or private information.</p>
+      <p>
+        Your code snippet will be displayed publicly so be careful of what you
+        share. Make sure you are not sharing private information.
+      </p>
     </header>
     <main id="main">
-      <label for="title-input">Title</label>
-      <input type="text" id="title-input" />
-      <label for="language-select">Coding language</label>
-      <select name="language" id="language-select">
-        <option value="html">HTML</option>
-      </select>
-      <label for="code-input">Code</label>
-      <textarea name="code" id="code-input" cols="30" rows="10"></textarea>
+      <form action="/dashboard" method="post">
+        <label for="title-input">Title</label>
+        <input name="title" id="title-input" required />
+        <label for="language-select">Coding language</label>
+        <select name="language" id="language-select">
+          <option value="html">HTML</option>
+        </select>
+        <label for="code-input">Code</label>
+        <textarea
+          name="code"
+          id="code-input"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <button type="submit">Save snippet</button>
+      </form>
     </main>
-    <footer>
-      © 2025 / 1447 v-snippets, All rights reserved.
-    </footer>
+    <footer>© 2025 / 1447 v-snippets, All rights reserved.</footer>
     <script src="script.js" defer></script>
   </body>
 </html>
